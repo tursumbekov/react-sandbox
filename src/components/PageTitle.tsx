@@ -6,6 +6,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     title: {
       textTransform: "uppercase",
+      marginBottom: 20,
     },
   })
 );

@@ -21,7 +21,7 @@ import RouteItem from '../model/RouteItem.model';
 // define app routes
 export const routes: Array<RouteItem> = [
     {
-        key: "router-home",
+        routeKey: "router-home",
         title: "Home",
         tooltip: "Home",
         path: "/",
@@ -31,7 +31,7 @@ export const routes: Array<RouteItem> = [
         appendDivider: true
     },
     {
-        key: "router-dashboard",
+        routeKey: "router-dashboard",
         title: "Dashboard",
         tooltip: "Dashboard",
         path: "/dashboard",
@@ -40,14 +40,14 @@ export const routes: Array<RouteItem> = [
         icon: DashboardIcon
     },
     {
-        key: "router-gh",
+        routeKey: "router-gh",
         title: "GitHub",
         tooltip: "GitHub",
         enabled: true,
         icon: GitHubIcon,
         subRoutes: [
             {
-                key: "router-gh-private",
+                routeKey: "router-gh-private",
                 title: "Private Repos",
                 tooltip: "Private Repos",
                 path: "/gh/private",
@@ -56,7 +56,7 @@ export const routes: Array<RouteItem> = [
                 icon: PrivateIcon
             }
             , {
-                key: "router-gh-public",
+                routeKey: "router-gh-public",
                 title: "Public Repos",
                 tooltip: "Public Repos",
                 path: "/gh/public",
@@ -67,7 +67,7 @@ export const routes: Array<RouteItem> = [
         ]
     },
     {
-        key: "router-code",
+        routeKey: "router-code",
         title: "Code Editor",
         tooltip: "Code Editor",
         path: "/code-editor",
@@ -77,7 +77,7 @@ export const routes: Array<RouteItem> = [
         appendDivider: true
     },
     {
-        key: "router-settings",
+        routeKey: "router-settings",
         title: "Settings",
         tooltip: "Settings",
         path: "/settings",

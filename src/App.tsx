@@ -6,7 +6,7 @@ import {
   ThemeProvider,
 } from "@material-ui/core/styles";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 // components
 import Layout from "./components/Layout";
@@ -39,7 +39,7 @@ function App() {
   theme = responsiveFontSizes(theme);
 
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <title>{APP_TITLE}</title>
       </Helmet>
@@ -52,14 +52,14 @@ function App() {
                 {routes.map((route: RouteItem) => (
                   route.subRoutes ? route.subRoutes.map((item: RouteItem) => (
                     <Route
-                      key={`${item.key}`}
+                      key={`${item.routeKey}`}
                       path={`${item.path}`}
                       component={item.component || DefaultComponent}
                       exact
                     />
                   )) :
                     <Route
-                      key={`${route.key}`}
+                      key={`${route.routeKey}`}
                       path={`${route.path}`}
                       component={route.component || DefaultComponent}
                       exact
@@ -70,7 +70,7 @@ function App() {
           </Router>
         </ThemeProvider>
       </AppContext.Provider>
-    </>
+    </HelmetProvider>
   );
 }
 

@@ -1,6 +1,8 @@
 import React, { FC, ReactElement } from "react";
 import { Helmet } from "react-helmet";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
+import RecipeReviewCard from '../components/RecipeReviewCard';
+import { Counter } from '../features/counter/counter';
 
 // components
 import PageTitle from "../components/PageTitle";
@@ -14,8 +16,7 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       flex: 1,
       display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-between",
+      flexDirection: "column",
     },
   })
 );
@@ -31,6 +32,8 @@ const Home: FC<{}> = (): ReactElement => {
       </Helmet>
       <div className={classes.root}>
         <PageTitle title={PAGE_TITLE_HOME} />
+        <RecipeReviewCard />
+        <Counter />
       </div>
     </>
   );

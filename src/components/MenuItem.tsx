@@ -48,7 +48,7 @@ const MenuItem: FC<RouteItem> = (route: RouteItem): ReactElement => {
       <NavLink
         to={`${route.path}`}
         style={{ textDecoration: "none", color: "inherit" }}
-        key={`${route.key}`}
+        key={`${route.routeKey}`}
         onClick={handleNavigate}
         className={clsx({
           [classes.listItemDisabled]: !route.enabled,

@@ -27,8 +27,8 @@ The following frameworks/libraries have been implemented:
 To get up and running with the template, you just have to run the _git_ commands below:
 
 ```
-git clone https://github.com/danilocastronz/weldev-project-react-mui-ts-bp
-cd weldev-project-react-mui-ts-bp
+git clone https://github.com/tursumbekov/react-sandbox.git
+cd react-sandbox
 yarn install
 ```
 
